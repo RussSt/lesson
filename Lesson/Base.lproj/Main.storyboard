@@ -28,17 +28,15 @@
                                         <color key="strokeColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                    <color key="baseForegroundColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="JOA-BF-5LG"/>
-                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xgh-WF-eSI">
                                 <rect key="frame" x="64.5" y="59" width="285" height="32"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="285" id="dYG-ia-uyp"/>
+                                    <constraint firstAttribute="height" constant="31" id="nXZ-bl-4SN"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Purple"/>
@@ -55,9 +53,8 @@
                         <constraints>
                             <constraint firstItem="Xgh-WF-eSI" firstAttribute="top" secondItem="HP2-HO-ZEU" secondAttribute="top" constant="15" id="AyB-hc-iFa"/>
                             <constraint firstItem="fhR-EE-evC" firstAttribute="centerX" secondItem="Pcj-sC-NAP" secondAttribute="centerX" id="IFO-O6-Qq5"/>
-                            <constraint firstItem="Xgh-WF-eSI" firstAttribute="top" secondItem="HP2-HO-ZEU" secondAttribute="top" constant="15" id="LvL-P6-PK6"/>
                             <constraint firstItem="Xgh-WF-eSI" firstAttribute="centerX" secondItem="Pcj-sC-NAP" secondAttribute="centerX" id="eeo-FY-mLR"/>
-                            <constraint firstItem="HP2-HO-ZEU" firstAttribute="bottom" secondItem="fhR-EE-evC" secondAttribute="bottom" constant="70" id="uFu-3Z-dGX"/>
+                            <constraint firstItem="HP2-HO-ZEU" firstAttribute="bottom" secondItem="fhR-EE-evC" secondAttribute="bottom" constant="70" id="r49-cW-BKG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Db4-zm-4Er"/>
@@ -74,11 +71,11 @@
             <objects>
                 <viewController id="WEK-RH-UD7" userLabel="Authorization View Controller" customClass="AuthorizationViewController" customModule="Lesson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BlM-jS-395">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="H5L-x9-3oC">
-                                <rect key="frame" x="67" y="358.5" width="280" height="125"/>
+                                <rect key="frame" x="67" y="385.5" width="280" height="125"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k4z-9A-3lI">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
@@ -107,7 +104,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="gNX-Ja-Naz">
-                                <rect key="frame" x="10" y="358.5" width="45" height="125"/>
+                                <rect key="frame" x="10" y="385.5" width="45" height="125"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3dE-6Y-BdT">
                                         <rect key="frame" x="0.0" y="1.5" width="45" height="41.5"/>
@@ -134,36 +131,28 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pl-Yw-C6O">
-                                <rect key="frame" x="132" y="762" width="150" height="40"/>
+                                <rect key="frame" x="132" y="782" width="150" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GPI-tN-1UM"/>
                                     <constraint firstAttribute="width" constant="150" id="QhZ-8R-Cua"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Forgot password?" cornerStyle="large">
-                                    <backgroundConfiguration key="background"/>
-                                    <fontDescription key="titleFontDescription" name="ComicSansMS" family="Comic Sans MS" pointSize="14"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                     <color key="baseForegroundColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chV-31-Ylg">
-                                <rect key="frame" x="67" y="508.5" width="280" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chV-31-Ylg">
+                                <rect key="frame" x="67" y="535.5" width="280" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="MOR-CB-t4e"/>
                                     <constraint firstAttribute="height" constant="40" id="t6C-pp-sEP"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign in" cornerStyle="medium">
-                                    <backgroundConfiguration key="background" strokeWidth="4" strokeOutset="4">
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <color key="strokeColor" systemColor="systemGreenColor"/>
-                                    </backgroundConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign in">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="QMB-qL-bzP" kind="presentation" modalPresentationStyle="fullScreen" id="O6q-Qy-nGe"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LMW-EC-v6M"/>
@@ -214,9 +203,6 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="WEK-RH-UD7" kind="show" id="dlh-uw-okA"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmn-zJ-SAC">
                                         <rect key="frame" x="0.0" y="47" width="382" height="31"/>
